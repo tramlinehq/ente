@@ -32,16 +32,16 @@ jobs:
         uses: timheuer/base64-to-file@v1
         with:
           fileName: 'keystore/ente_photos_key.jks'
-          encodedString: ${{ secrets.SIGNING_KEY }}
+          encodedString: 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
 
       # Build independent apk.
       - name: Build
         run: flutter build apk --release --flavor independent && mv build/app/outputs/flutter-apk/app-independent-release.apk build/app/outputs/flutter-apk/ente.apk
         env:
           SIGNING_KEY_PATH: '/home/runner/work/_temp/keystore/ente_photos_key.jks'
-          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
-          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
-          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+          SIGNING_KEY_ALIAS: entekey
+          SIGNING_KEY_PASSWORD: foobar
+          SIGNING_STORE_PASSWORD: ALpZoF9cblvbikN
 
       - name: Checksum
         run: sha256sum build/app/outputs/flutter-apk/ente.apk > build/app/outputs/flutter-apk/sha256sum
@@ -58,8 +58,8 @@ jobs:
           path: build/app/outputs/flutter-apk/sha256sum
 
       # Create a pre-release
-      - uses: ncipollo/release-action@v1.14.0
-        with:
-          artifacts: "build/app/outputs/flutter-apk/ente.apk,build/app/outputs/flutter-apk/sha256sum"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: true
+      # - uses: ncipollo/release-action@v1.14.0
+      #   with:
+      #     artifacts: "build/app/outputs/flutter-apk/ente.apk,build/app/outputs/flutter-apk/sha256sum"
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     prerelease: true
