@@ -47,7 +47,7 @@ jobs:
           SIGNING_KEY_PATH: '/home/runner/work/_temp/keystore/ente_photos_key.jks'
           SIGNING_KEY_ALIAS: entekey
           SIGNING_KEY_PASSWORD: foobar
-          SIGNING_STORE_PASSWORD: ALpZoF9cblvbikN
+          SIGNING_STORE_PASSWORD: foobar
 
       - name: Checksum
         run: sha256sum build/app/outputs/flutter-apk/ente.apk > build/app/outputs/flutter-apk/sha256sum
