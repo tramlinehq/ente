@@ -41,7 +41,7 @@ jobs:
       # Build independent apk.
       - name: Build
         run: |
-          file /home/runner/work/_temp/keystore/ente_photos_key.jks
+          file keystore/ente_photos_key.jks
           flutter build apk --release --flavor independent && mv build/app/outputs/flutter-apk/app-independent-release.apk build/app/outputs/flutter-apk/ente.apk
         env:
           SIGNING_KEY_PATH: '/home/runner/work/_temp/keystore/ente_photos_key.jks'
