@@ -41,6 +41,9 @@ jobs:
       # Build independent apk.
       - name: Build
         run: |
+          pwd
+          ls
+          tree .
           file keystore/ente_photos_key.jks
           flutter build apk --release --flavor independent && mv build/app/outputs/flutter-apk/app-independent-release.apk build/app/outputs/flutter-apk/ente.apk
         env:
