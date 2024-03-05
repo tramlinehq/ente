@@ -43,17 +43,19 @@ jobs:
         run: |
           pwd
           ls
-          tree .
-          file keystore/ente_photos_key.jks
+          file /Users/runner/actions-runner/_work/_temp/keystore/ente_photos_key.jks
           flutter build apk --release --flavor independent && mv build/app/outputs/flutter-apk/app-independent-release.apk build/app/outputs/flutter-apk/ente.apk
         env:
-          SIGNING_KEY_PATH: '/home/runner/work/_temp/keystore/ente_photos_key.jks'
+          SIGNING_KEY_PATH: '/Users/runner/actions-runner/_work/_temp/keystore/ente_photos_key.jks'
           SIGNING_KEY_ALIAS: entekey
           SIGNING_KEY_PASSWORD: foobar
           SIGNING_STORE_PASSWORD: foobar
 
       - name: Checksum
-        run: sha256sum build/app/outputs/flutter-apk/app-independent-release.apk > build/app/outputs/flutter-apk/sha256sum
+        run: |
+          ls
+          ls build/app/outputs/flutter-apk/*
+          sha256sum uild/app/outputs/flutter-apk/ente.apk > build/app/outputs/flutter-apk/sha256sum
 
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v4
